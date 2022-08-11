@@ -10,8 +10,9 @@ import re
 df = pd.read_csv('Cleaned_Indian_Food_Dataset.csv')
 
 # Sidebar option
-clf = st.sidebar.selectbox("Select a model", ("TF-IDF", "Word2Vec"))
+#clf = st.sidebar.selectbox("Select a model", ("TF-IDF", "Word2Vec"))
 
+clf = "TF-IDF"
 if clf == "TF-IDF":
     with open('tfidf_vec.pkl', 'rb') as f:
         tfidf_vec = pickle.load(f)
